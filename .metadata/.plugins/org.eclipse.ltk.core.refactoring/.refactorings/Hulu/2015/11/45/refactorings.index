@@ -1,0 +1,17 @@
+1446526105903	Rename compilation unit 'HangMan.java'
+1446526155276	Delete element
+1446526570818	Rename type 'JailWeb'
+1446526739485	Rename local variable 'numError'
+1446526777222	Rename local variable 'numGuess'
+1446526972449	Rename type 'Prisoner'
+1446527559440	Rename local variable 'intelligence'
+1446527600137	Rename local variable 'hostage'
+1446527950259	Rename method 'playGame'
+1446530410679	Delete element
+1446530555637	Rename local variable 'prisoner'
+1446530583753	Rename local variable 'hostage'
+1446530589795	Rename local variable 'hangmanServer'
+1446530786394	Rename local variable 'hostage_after'
+1446530911922	Rename field 'correct'
+1446530919338	Rename field 'incorrect'
+1446534714891	Rename local variable 'guessing'

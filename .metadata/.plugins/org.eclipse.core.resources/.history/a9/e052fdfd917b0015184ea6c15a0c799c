@@ -1,0 +1,7 @@
+package com.practice.g2g;
+
+public class JavaPatternMatching {
+	public static void main(String[] args) {
+		
+	}
+}

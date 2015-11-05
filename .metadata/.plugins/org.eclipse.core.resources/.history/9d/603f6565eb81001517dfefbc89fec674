@@ -1,0 +1,47 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+
+public class HangManMain {
+	public static void main(String[] args){
+				
+		while(true) {
+			BufferedReader br = new BufferedReader(new InputStreamReader());
+			playGame();
+		}
+				
+	}
+
+	private static void playGame() {
+		
+		HangManBrain brain = new HangManBrain();
+		RestInterface restInterface = new RestInterface();
+		HangManServer gameContext = restInterface.startGame();
+		
+		int errorCount = 0;
+		int totalGuesses = 0;
+		
+		while(!gameContext.getGameStatus().equals("DEAD") && !gameContext.getGameStatus().equals("FREE")){
+			System.out.println(gameContext.getState());
+			char guess = brain.makeGuess(gameContext.getState()); //get a guess using AI
+			HangManServer hostage_after = restInterface.makeGuess(gameContext, guess); //Update the state
+			totalGuesses++;
+			if(gameContext.getState().equals(hostage_after.getState())){
+				brain.update(guess, false);
+				if(hostage_after.getRemaining() == 1){
+					System.out.println(guess + " is " + false + " , " + hostage_after.getRemaining() + " more try.");
+				}
+				else{
+					System.out.println(guess + " is " + false + " , " + hostage_after.getRemaining() + " more tries.");
+				}
+				errorCount++;
+			}
+			else{
+				brain.update(guess, true);
+				System.out.println(guess + " is " + true);
+			}
+			gameContext = hostage_after;
+		}
+		
+	}
+}

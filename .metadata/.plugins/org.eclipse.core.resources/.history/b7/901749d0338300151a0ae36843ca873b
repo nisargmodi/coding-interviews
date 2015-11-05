@@ -1,0 +1,44 @@
+package com.practice.linkedin.glassdoor;
+
+public class MaxSubArray {
+	public static void main(String[] args) {
+		int[] array = {-2, -5, 6, -2, -3, 1, 5, -6};
+		array = maxSubArray(array);
+		
+		for(int i=0; i<array.length; i++) {
+			System.out.print(array[i]+"||");
+		}
+	}
+	
+	public static int[] maxSubArray(int[] a) {
+		int max_so_far = a[0];
+		int maxSum = a[0];
+		int maxIndex= 0;
+		for(int i=1; i<a.length; i++) {
+			
+			if(a[i]>=max_so_far + a[i])
+				int curr_max = a[i];
+			else {
+				maxSumArray[i] = maxSumArray[i-1] + a[i];
+			}
+			
+			if(maxSumArray[i] > a[maxIndex]) {
+				maxIndex = i;
+				maxSum = maxSumArray[i];
+			}
+		}
+		
+		System.out.println(maxSum);
+		System.out.println(maxIndex);
+		
+		int[] maxSubArray = new int [a.length];
+		int i=0;
+		while(maxSum != 0) {
+			maxSubArray[i++] = a[maxIndex];
+			maxSum -= a[maxIndex--];
+	}
+		
+		return maxSubArray;
+	}
+
+}

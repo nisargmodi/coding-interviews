@@ -1,0 +1,5 @@
+package com.symbol.tables.bst;
+
+public class Node {
+
+}

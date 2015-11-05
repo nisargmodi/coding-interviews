@@ -1,0 +1,26 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+public class TestWhileInfinite {
+	
+public static void main(String[] args) throws IOException{
+		
+		boolean play = true;
+		while(true) {
+			System.out.println("Enter P for play, X for exit");
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			if(br.readLine() == "P") {
+				System.out.println("playing");
+				//playGame();
+			}
+			else {
+				play = false;
+			}
+			
+		}
+				
+	}
+
+}

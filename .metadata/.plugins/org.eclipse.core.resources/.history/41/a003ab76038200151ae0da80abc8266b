@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Test {
+	public static void main(String[] args) {
+		
+		
+		int count = 0;
+		String wordToBeGuessed = null;
+		int underscore_counter = 0;
+		List<String> state_list = new ArrayList<String>();
+		state_list.add("____");
+		state_list.add("___");
+		state_list.add("____");
+		state_list.add("__");
+		
+		
+		
+		
+		System.out.println("Word to be guessed:"+wordToBeGuessed);
+		
+	}
+}
