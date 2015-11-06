@@ -10,7 +10,7 @@ public class One {
 	public static void main(String[] args) {
 		
 		CustomLinkedList ll = new CustomLinkedList();
-		LLNode head = ll.createTestSet();
+		LLNode head = ll.createTestSet1();
 		ll.printLL(head);
 		/*Map<Integer, Integer> myMap = new HashMap<>();
 		myMap.put(1, 1);

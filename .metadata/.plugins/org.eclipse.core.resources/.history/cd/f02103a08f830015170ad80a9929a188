@@ -1,0 +1,13 @@
+package com.practice.linkedin.glassdoor;
+
+public class TrianglesInArrayOfInts {
+	public static void main(String[] args) {
+		int[] a =  {4, 6, 3, 7};
+		
+		System.out.println(countNoOfTriangles());
+	}
+	
+	public void countNoOfTriangles() {
+		
+	}
+}

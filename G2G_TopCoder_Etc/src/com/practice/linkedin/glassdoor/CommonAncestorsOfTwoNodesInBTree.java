@@ -1,3 +1,31 @@
+/* The below code has a bug. */
+/* Without using any additional data structure:
+TreeNode commonAncestorBad(TreeNode root, TreeNode p, TreeNode q) {
+ if (root == null) {
+ }
+if
+ }
+return null;
+(root == p && root == q) {
+return root;
+ TreeNode x = commonAncestorBad(root.left, p, q);
+if (x != null && x != p && x != q) { // Already found ancestor
+return x;
+ }
+TreeNode y = commonAncestorBad(root.right, p, q);
+if (y != null && y != p && y != q) { // Already found ancestor
+return yj
+}
+if (x != null && y != null) { // p and q found in diff. subtrees
+return root; // This is the common ancestor
+} else if (root == p || root == q) {
+return root;
+} else {
+// If either x or y is non-null, return the non-null value
+return x == null ? y : x;
+}
+}
+*/
 package com.practice.linkedin.glassdoor;
 
 import java.util.HashMap;

@@ -1,0 +1,21 @@
+package com.practice.linkedin.glassdoor;
+
+public class SumOfAllIntegersWeightedByDepth {
+	
+	public static void main(String[] args) {
+		String s = "{{1,1},2,{1,1,}}";
+		System.out.println(findSum(s));
+	}
+
+	private static int findSum(String s) {
+		
+		int depth = 1;
+		int sum =0;
+		for(int i=0; i<s.length(); i++) {
+			if(Character.isDigit(s.charAt(i)))
+				sum+=depth*i;
+		}
+		return 0;
+	}
+
+}

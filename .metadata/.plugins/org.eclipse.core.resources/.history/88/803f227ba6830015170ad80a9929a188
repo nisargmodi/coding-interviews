@@ -1,0 +1,18 @@
+package com.practice.linkedin.glassdoor;
+
+public class TwoSumProblem {
+	public static void main(String[] args) {
+		int[] a= {1, 4, 45, 6, 10, -8};
+		int sum = 16;
+		
+		//System.out.println(TwoSum(a, sum));
+		TwoSum(a, sum);
+	}
+
+	private static void TwoSum(int[] a, int sum) {
+		Map<Integer, Integer> myMap = new HashMap<>();
+		for(int i=0; i<a.length; i++) {
+			
+		}
+	}
+}

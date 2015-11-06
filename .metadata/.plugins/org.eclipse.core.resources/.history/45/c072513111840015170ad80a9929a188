@@ -1,0 +1,13 @@
+package com.practice.linkedin.glassdoor;
+
+import com.linkedlists.CustomLinkedList;
+import com.linkedlists.LLNode;
+
+public class MergeTwoSortedLists {
+	
+	CustomLinkedList ll = new CustomLinkedList();
+	LLNode head1 = ll.createTestSet();
+	LLNode head2 = ll.createTestSet1();
+	
+
+}

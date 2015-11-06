@@ -1,0 +1,40 @@
+package com.practice.linkedin.glassdoor;
+
+import java.util.Arrays;
+
+public class TrianglesInArrayOfInts {
+	public static void main(String[] args) {
+		int[] a =  {4, 6, 3, 7};
+		int[] a1=  {10, 21, 22, 100, 101, 200, 300};
+		
+		System.out.println(countNoOfTriangles(a1));
+	}
+	
+	public static int countNoOfTriangles(int[] a) {
+		int no = 0;
+		Arrays.sort(a);
+		for(int i=0; i<a.length; i++) {
+			int first = i;
+			int second = i+1;
+			int third = second+1;
+			while(second<a.length-1) {
+				while(third<a.length) {
+					if(checkTri(a[first], a[second], a[third])) {
+						third++;
+					}
+					else break;
+				}
+				no+=third-second;
+				second++;
+			}
+		}
+		
+		return no;
+	}
+
+	private static boolean checkTri(int first, int second, int third) {
+		if(first+second>third && first+third>second && second+third>first)
+			return true;
+		return false;
+	}
+}

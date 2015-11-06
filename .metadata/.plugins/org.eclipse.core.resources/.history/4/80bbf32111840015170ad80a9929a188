@@ -1,0 +1,9 @@
+package com.practice.linkedin.glassdoor;
+
+import com.linkedlists.CustomLinkedList;
+
+public class MergeTwoSortedLists {
+	
+	CustomLinkedList ll = new CustomLinkedList();
+
+}

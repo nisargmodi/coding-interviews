@@ -1,0 +1,27 @@
+package com.practice.linkedin.glassdoor;
+
+public class CountOfElementInSortedArray {
+	static int count = 0;
+	public static void main(String[] args) {
+		int[] a = {1,1,2,2,2,3,4,5,6,6,7,8,9,9,9};
+		int key = 9;
+		System.out.println(count(a, key));
+	}
+	
+	public static int count(int[] a, int key) {
+		return binarySearchCount(a, 0, a.length-1, key);
+	}
+
+	private static int binarySearchCount(int[] a, int lo, int hi, int key) {
+		if(lo>hi) return count;
+		int mid = lo + (hi-lo)/2;
+		
+		if(a[mid] == key) {
+			count++;
+			if(a[mid+1] == key) binarySearchCount(a, mid+1, a.length-1, key);
+			if(a[mid-1] == key) binarySearchCount(a, mid-1, a.length-1, key);
+		}
+		return count;
+	}
+	
+}

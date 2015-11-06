@@ -1,0 +1,7 @@
+package com.practice.linkedin.glassdoor;
+
+public class CountOfElementInSortedArray {
+	public static void main(String[] args) {
+		
+	}
+}

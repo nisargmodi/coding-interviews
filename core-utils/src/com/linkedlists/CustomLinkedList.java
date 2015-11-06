@@ -1,7 +1,7 @@
 package com.linkedlists;
 
 public class CustomLinkedList {
-	public LLNode createTestSet() {
+	public LLNode createTestSet1() {
 		
 		LLNode ll = new LLNode();
 		LLNode head = ll;
@@ -10,7 +10,7 @@ public class CustomLinkedList {
 		while(i<3) {
 			ll.next = new LLNode();
 			ll = ll.next;
-			ll.data = i+1;
+			ll.data = 2*i+1;
 			i++;
 		}
 		
@@ -26,7 +26,7 @@ public class CustomLinkedList {
 		while(i<5) {
 			ll.next = new LLNode();
 			ll = ll.next;
-			ll.data = i+5;
+			ll.data = 2*i;
 			i++;
 		}
 		

@@ -1,0 +1,69 @@
+/*
+ *  private int sum = 0;
+    public int depthSum(List< NestedInteger> input)
+    {
+        //Implement this function
+        this.depthSumRecursion(input, 1);
+        return sum;
+    }
+
+    private void depthSumRecursion(List< NestedInteger> input, int depth)
+    {
+        foreach (var nestedInteger in input)
+        {
+            if (nestedInteger.isInteger())
+            {
+                sum += nestedInteger.getInteger() * depth;
+            }
+            else
+            {
+                this.depthSumRecursion(nestedInteger.getList(), depth + 1);
+            }
+        }
+    }
+
+    //This is the interface that allows for creating nested lists. You should not implement it, or speculate about its implementation
+
+    public interface NestedInteger
+    {
+        // Returns true if this NestedInteger holds a single integer, rather than a nested list
+        public bool isInteger();
+
+        // Returns the single integer that this NestedInteger holds, if it holds a single integer
+        // Returns null if this NestedInteger holds a nested list
+        public int getInteger();
+
+        // Returns the nested list that this NestedInteger holds, if it holds a nested list
+        // Returns null if this NestedInteger holds a single integer
+        public List getList();
+    }
+ */
+
+package com.practice.linkedin.glassdoor;
+
+public class SumOfAllIntegersWeightedByDepth {
+	
+	public static void main(String[] args) {
+		String s = "{{1,1},2,{1,1,}}";
+		System.out.println(findSum(s));
+	}
+
+	private static int findSum(String s) {
+		
+		int depth = 0;
+		int sum =0;
+		for(int i=0; i<s.length(); i++) {
+			//if(Character.isDigit(s.charAt(i))) {
+			if(s.charAt(i)>='0' && s.charAt(i)<='9') {
+				//System.out.println("char:"+s.charAt(i));
+				sum+=depth*(s.charAt(i)-48);	
+			}
+			else if(s.charAt(i) == '{')
+				depth++;
+				else if(s.charAt(i) == '}')
+					depth--;
+		}
+		return sum;
+	}
+
+}

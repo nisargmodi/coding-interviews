@@ -6,7 +6,7 @@ import com.linkedlists.LLNode;
 public class Five {
 	public static void main(String[] args) {
 		CustomLinkedList ll = new CustomLinkedList();
-		LLNode head1 = ll.createTestSet();
+		LLNode head1 = ll.createTestSet1();
 		
 		LLNode head2 = ll.createTestSet2();
 		
