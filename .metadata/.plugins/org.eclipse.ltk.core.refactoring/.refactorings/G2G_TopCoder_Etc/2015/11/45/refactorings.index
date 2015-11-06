@@ -3,3 +3,5 @@
 1446684636080	Rename local variable 'r'
 1446758861606	Rename local variable 'l'
 1446758868082	Rename local variable 'h'
+1446795510176	Rename method 'mirror'
+1446795532060	Rename method 'mirrorTree'

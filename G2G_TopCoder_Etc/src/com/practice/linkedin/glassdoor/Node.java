@@ -23,8 +23,8 @@ public class Node {
 		root.left.left.left = new Node(6, null, null);
 		root.left.left.right = new Node(7, null, null);
 		
-		root.left.right.left = new Node(8, null, null);
-		root.left.right.right = new Node(9, null, null);
+		/*root.left.right.left = new Node(8, null, null);
+		root.left.right.right = new Node(9, null, null);*/
 		
 		return root;
 		

@@ -1,0 +1,19 @@
+package com.practice.linkedin.glassdoor;
+
+public class MirrorTree {
+	public static void main(String[] args) {
+		Node n = new Node(0, null, null);
+		
+		n = n.buildTree();
+		n.print(n);
+		
+		Node root = mirror(n);
+		root.print(root);
+		
+	}
+
+	private static Node mirror(Node n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

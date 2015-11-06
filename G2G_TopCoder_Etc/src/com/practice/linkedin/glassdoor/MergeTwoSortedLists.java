@@ -2,7 +2,12 @@ package com.practice.linkedin.glassdoor;
 
 import com.linkedlists.CustomLinkedList;
 import com.linkedlists.LLNode;
-
+/*
+ * 
+ * Give two sorted lists List<Integer> a and List<Integer> b.
+ * Find the Union of these two lists -> the union list should also be sorted 
+ * the Intersection of these two lists -> Intersection list should also be sorted.
+ */
 public class MergeTwoSortedLists {
 	
 	public static void main(String[] args) {
@@ -11,9 +16,15 @@ public class MergeTwoSortedLists {
 		LLNode head1 = ll.createTestSet1();
 		LLNode head2 = ll.createTestSet2();
 		
-		ll.printLL(merge(head1, head2));
+		ll.printLL(head1);
+		System.out.println("-----------");
+		ll.printLL(head2);
+		System.out.println("-----------");
+		//ll.printLL(merge(head1, head2));
+		ll.printLL(intersect(head1, head2));
 	}
-
+	
+	//union
 	private static LLNode merge(LLNode head1, LLNode head2) {
 		
 		LLNode head = new LLNode();
@@ -27,7 +38,7 @@ public class MergeTwoSortedLists {
 			LLNode prev1 = head1;
 			LLNode prev2 = head2;
 			
-			while(head1!=null && head1.data<head2.data) {
+			while(head1!=null && head1.data<=head2.data) {
 					prev1 = head1;
 					head1 = head1.next;
 				}
@@ -44,6 +55,43 @@ public class MergeTwoSortedLists {
 			}
 		}
 		return head;
-	}	
+	}
+	
+private static LLNode intersect(LLNode head1, LLNode head2) {
+		
+		LLNode head = null;
+		LLNode prev = new LLNode();
+		boolean first = true;
+		
+		while(head1 != null && head2!=null){
+		
+			if(head1.data != head2.data) {
+				if(head1.data < head2.data) {
+					head1 = head1.next;
+				}
+				else {
+					head2 = head2.next;
+				}
+			}
+			else {
+				if(first) {
+					prev = head1;
+					head = prev;
+					first = false;
+				}
+				else {
+					prev.next = head1;
+					prev = prev.next;
+				}
+				
+				head1 = head1.next;
+				head2 = head2.next;
+			}
+			
+		}
+		
+		return head;
+	}
+	
 
 }

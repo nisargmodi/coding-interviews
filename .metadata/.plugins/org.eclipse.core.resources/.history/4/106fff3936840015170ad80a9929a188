@@ -1,0 +1,17 @@
+package com.practice.linkedin.glassdoor;
+
+import java.util.Stack;
+
+public class ReversePolishAKAPostfixNotations {
+	public static void main(String[] args) {
+		String s = "34+";
+		System.out.println(reversePolishSoln(s));
+	}
+	
+	public static int reversePolishSoln(String s) {
+		
+		Stack<Character> st = new Stack<>();
+		return 0;
+		
+	}
+}

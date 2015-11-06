@@ -1,0 +1,27 @@
+package com.practice.linkedin.glassdoor;
+
+public class FlipTree {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static Node flipTree ( Node root ) {
+	    if (root == null)
+	        return null;
+	    
+	    // Working base condition
+	    if( root.left == null && root.right == null) 
+	    {
+	        return root.left;
+	    }
+	    
+	    Node newRoot = flipTree(root.left);
+	    
+	    root.left.left = root.right;
+	    root.left.right = root;
+	    root.left = null;
+	    root.right = null;
+	    
+	    return newRoot;
+	}
+}

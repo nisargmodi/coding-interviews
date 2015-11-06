@@ -1,0 +1,40 @@
+package com.practice.linkedin.glassdoor;
+
+public class Node {
+	
+	int data;
+	Node left;
+	Node right;
+	
+	public Node(int data, Node left, Node right) {
+		this.data = data;
+		this.left = left;
+		this.right = right;
+	}
+
+	public Node buildTree() {
+		Node root = new Node(1, null, null);
+		root.left = new Node(2, null, null);
+		root.right = new Node(3, null, null);
+		
+		root.left.left = new Node(4, null, null);
+		root.left.right = new Node(5, null, null);
+		
+		root.left.left.left = new Node(6, null, null);
+		root.left.left.right = new Node(7, null, null);
+		
+		root.left.right.left = new Node(8, null, null);
+		root.left.right.right = new Node(9, null, null);
+		
+		return root;
+		
+	}
+
+	public static void print(Node n) {
+		if(n==null) return;
+		print(n.left);
+		System.out.println(n.data);
+		print(n.right);
+	}
+
+}
