@@ -1,7 +1,0 @@
-package com.practice.linkedin.glassdoor;
-
-public class CheckIfStringIsANo {
-	public static void main(String[] args) {
-		
-	}
-}
