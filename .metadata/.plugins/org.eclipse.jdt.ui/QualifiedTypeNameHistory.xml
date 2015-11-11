@@ -17,9 +17,10 @@
 <fullyQualifiedTypeName name="com.practice.linkedin.glassdoor.CommonAncestorsOfTwoNodesInBTree"/>
 <fullyQualifiedTypeName name="com.practice.linkedin.glassdoor.CommonAncestorsOfTwoNodesInBTree.Node"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.linkedlists.CustomLinkedList"/>
 <fullyQualifiedTypeName name="com.linkedlists.LLNode"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="com.practice.linkedin.glassdoor.Node"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.concurrent.LinkedBlockingDeque"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,7 @@
+# Ignore SQLite database
+/.metadata
+/.recommenders
+
+# Ignore all tempfiles
+/log/*
+/tmp

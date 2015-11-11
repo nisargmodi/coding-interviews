@@ -1,5 +1,8 @@
 package com.symbol.tables.bst;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree<Key extends Comparable<Key>, Value> {
  
 	private Node root;
@@ -81,7 +84,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 	 }
 	
 	public Iterable<Key> keys()	{
-		Queue<Key> q = new Queue<Key>();
+		Queue<Key> q = new LinkedList<Key>();
 		 inorder(root, q);
 		 return q;
 	}
@@ -89,7 +92,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 	private void inorder(Node x, Queue<Key> q) {
 		if (x == null) return;
 		inorder(x.left, q);
-		q.enqueue(x.key);
+		q.add(x.key);
 		inorder(x.right, q);
 	} 
 	
@@ -129,6 +132,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 	  if (cmp < 0) return rank(key, x.left);
 	  else if (cmp > 0) return 1 + size(x.left) + rank(key, x.right);
 	  else if (cmp == 0) return size(x.left);
+	return 0;
 	 }
 	 
 	 public void deleteMin() {
