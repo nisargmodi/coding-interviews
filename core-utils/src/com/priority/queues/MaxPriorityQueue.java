@@ -9,7 +9,7 @@ public class MaxPriorityQueue {
 	exch(k, k/2);
 	k = k/2;
 	}
-	parent of node at k is at k/2
+	//parent of node at k is at k/2
 	}
 	
 	private void sink(int k)
@@ -36,10 +36,8 @@ public class MaxPriorityQueue {
 	{
 	Key max = pq[1];
 	exch(1, N--);
-	P
 	sink(1);
 	pq[N+1] = null;
-	N
 	return max;
 	}
 	

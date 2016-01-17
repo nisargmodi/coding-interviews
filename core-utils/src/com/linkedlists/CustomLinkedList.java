@@ -35,8 +35,11 @@ public class CustomLinkedList {
 	
 	public void printLL(LLNode head) {
 		while (head != null) {
-			System.out.println(head.data);
+			System.out.print(head.data+"->");
 			head = head.next;
 		}
+		
+		System.out.println();
 	}
+
 }

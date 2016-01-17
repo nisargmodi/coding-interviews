@@ -1,7 +1,9 @@
 package com.sorting;
 
 import java.util.Arrays;
-
+/*
+ * O(N) time, O(N) space!
+ */
 public class KeyIndexedCounting {
 
 	public static void main(String[] args) {
@@ -33,9 +35,9 @@ public class KeyIndexedCounting {
 			count[i+1] += count[i]; 
 		}
 		
-		for(int i=0; i<count.length; i++) {
+		/*for(int i=0; i<count.length; i++) {
 			System.out.print(count[i]+"--");
-		}
+		}*/
 		
 		int[] aux = new int[133];
 		for(int i=0; i<a.length; i++) {
