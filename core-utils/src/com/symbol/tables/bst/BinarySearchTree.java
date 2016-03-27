@@ -8,11 +8,11 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 	private Node root;
  
 	private class Node {
-		 
+		
 		private Key key;
 		private Value val;
 		private Node left, right;
-		private int count;
+		private int count; //how many nodes in the subtree including this node itself?
 		
 		public Node(Key key, Value val) {
 			this.key = key;
@@ -72,15 +72,36 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 				 if (x.left == null) return x.right;
 				 
 				 //if two children
-				 Node t = x;
-				 x = min(t.right);
-				 x.right = deleteMin(t.right);
-				 x.left = t.left;
+				 
+				 /* Consider node to be deleted as x
+				  * 
+				  * 1. first save the node to be deleted (t=x)
+				  * since we'll need it later for it's references.
+				  * 
+				  * 2. Then find the min node of the right subtree of x,
+				  * which will basically replace x i.e. put in the tree in place of x.
+				  * 
+				  * 3. delete the min found in above step from the right subtree of x.
+				  * 
+				  * 4. Set references of new node that replaced x
+				  * 
+				  */
+				 Node t = x; //Step 1
+				 x = min(t.right); //Step 2. gives min of the subtree starting with the root of node passed in as argument
+				 x.right = deleteMin(t.right); //Steps 3 and returned is 4a
+				 x.left = t.left; //Step 4b
 			 }
 		
 	 x.count = size(x.left) + size(x.right) + 1;
 	 
 	 return x;
+	 }
+	 
+	 private Node min(Node x) {
+		 while(x.left!=null) {
+			 x = x.left;
+		 }
+		 return x;
 	 }
 	
 	 public void deleteMin() {
@@ -128,22 +149,23 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 		return size(root);
 	}
 	
+	//how many nodes in the subtree including this node itself?
 	private int size(Node x) {
 		if (x == null) return 0;
 		return x.count;
 	}
-	 
-	 public int rank(Key key){
+	
+	public int rank(Key key){
 		 return rank(key, root);
-	 }
+	}
 	 
-	 private int rank(Key key, Node x) {
+	private int rank(Key key, Node x) {
 	  if (x == null) return 0;
 	  int cmp = key.compareTo(x.key);
 	  if (cmp < 0) return rank(key, x.left);
 	  else if (cmp > 0) return 1 + size(x.left) + rank(key, x.right);
 	  else if (cmp == 0) return size(x.left);
-	return 0;
-	 }
+	  return 0;
+	}
 	 
 }

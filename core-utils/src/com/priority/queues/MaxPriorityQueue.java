@@ -18,7 +18,7 @@ public class MaxPriorityQueue {
 	while (2*k <= N)
 	{
 	int j = 2*k;
-	if (j < N && less(j, j+1)) j++;
+	if (j < N && less(j, j+1)) j++;//get greater of two children and then compare in next line
 	if (!less(k, j)) break;
 	exch(k, j);
 	k = j;

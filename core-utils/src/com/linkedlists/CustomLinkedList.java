@@ -42,4 +42,53 @@ public class CustomLinkedList {
 		System.out.println();
 	}
 
+	public LLNode createTestSetWithLengthNull() {
+		return null;
+	}
+
+	public LLNode createTestSetWithLength1() {
+		LLNode ll = new LLNode();
+		LLNode head = ll;
+		//creating test set
+		int i=0;
+		while(i<1) {
+			ll.next = new LLNode();
+			ll = ll.next;
+			ll.data = 3*i;
+			i++;
+		}
+		
+		return head.next;
+	}
+	
+	public LLNode createTestSetWithLength2() {
+		LLNode ll = new LLNode();
+		LLNode head = ll;
+		//creating test set
+		int i=0;
+		while(i<2) {
+			ll.next = new LLNode();
+			ll = ll.next;
+			ll.data = 3*i;
+			i++;
+		}
+		
+		return head.next;
+	}
+	
+	public LLNode createTestSetWithLength3() {
+		LLNode ll = new LLNode();
+		LLNode head = ll;
+		//creating test set
+		int i=0;
+		while(i<3) {
+			ll.next = new LLNode();
+			ll = ll.next;
+			ll.data = 3*i;
+			i++;
+		}
+		
+		return head.next;
+	}
+
 }
